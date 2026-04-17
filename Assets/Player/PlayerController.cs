@@ -57,7 +57,9 @@ public class Player2D : MonoBehaviour
         jumpAction.canceled += _ =>
         {
             if (rb.linearVelocity.y > 0f)
+            {
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
+            }
         };
     }
 
@@ -98,7 +100,7 @@ public class Player2D : MonoBehaviour
             coyoteTimer     = 0f;  // prevent double-jumping on coyote window
         }
 
-        // heavier gravity on the way down, feels much better
+        // heavier gravity on the way down, feels better imo
         if (!isGrounded && rb.linearVelocity.y < 0f)
             rb.gravityScale = defaultGravityScale * fallGravityMultiplier;
         else
