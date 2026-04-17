@@ -108,7 +108,7 @@ MonoBehaviour:
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
     type: 3}
   speed: 7
-  jumpForce: 12
+  jumpForce: 6
   coyoteTime: 0.12
   jumpBufferTime: 0.15
   jumpCutMultiplier: 0.5
