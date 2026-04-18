@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2737324040426259049}
   - component: {fileID: 7472713166438840193}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CinemachineBrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76,7 +76,7 @@ GameObject:
   - component: {fileID: 8609613046734258563}
   - component: {fileID: 8432881287049214472}
   - component: {fileID: 5127087513644119443}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CinemachineCamera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 5286787014659600961}
   - component: {fileID: 3632896811640384646}
   - component: {fileID: 5899227260366469973}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -273,6 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc136fe686ca7f419a97bb947da4b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  Possesed: 0
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
     type: 3}
   speed: 7
@@ -308,7 +309,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -419,7 +420,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1485252252326354438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: groundcheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
