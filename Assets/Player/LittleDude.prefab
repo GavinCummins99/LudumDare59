@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 97884913521238247}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.33377, y: 0.42519063, z: -10}
+  m_LocalPosition: {x: 0, y: 0.7279406, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -236,11 +236,9 @@ GameObject:
   - component: {fileID: 5286787014659600961}
   - component: {fileID: 3632896811640384646}
   - component: {fileID: 5899227260366469973}
-  - component: {fileID: 8415414567165742361}
-  - component: {fileID: 2304681466535270509}
   m_Layer: 10
-  m_Name: Player
-  m_TagString: Untagged
+  m_Name: LittleDude
+  m_TagString: Picmin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -279,8 +277,8 @@ MonoBehaviour:
   Possesed: 0
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
     type: 3}
-  speed: 7
-  jumpForce: 6
+  speed: 3
+  jumpForce: 0
   coyoteTime: 0.12
   jumpBufferTime: 0.15
   jumpCutMultiplier: 0.5
@@ -415,35 +413,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &8415414567165742361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776802948618208602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c662f0f2e16921548b72c5ae5da8b5ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SignalController
-  startPoint: {fileID: 1860772721961186489}
-  endPoint: {fileID: 0}
-  LittleDude: {fileID: 0}
-  ribbonPrefab: {fileID: 8995185567957336216, guid: 566c770a5024d7743861a9501d8c0a89,
-    type: 3}
---- !u!114 &2304681466535270509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776802948618208602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d62623df50c3a749be9d603ca59846d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &5754865514906381168
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,7 +454,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860772721961186489}
   m_Layer: 10
-  m_Name: SignalStart
+  m_Name: SignalEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

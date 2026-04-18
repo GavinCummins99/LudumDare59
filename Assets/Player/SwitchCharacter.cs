@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using UnityEditor.UI;
 
 public class SwitchCharacter : MonoBehaviour
 {
@@ -63,14 +64,21 @@ public class SwitchCharacter : MonoBehaviour
 
         if (_sortedPikmin.Count == 0) return;
 
+        this.gameObject.GetComponent<SignalController>().Deactivate();
+        
+        
         _currentPikminIndex = (_currentPikminIndex + 1) % _sortedPikmin.Count;
         PossessPlayer(_sortedPikmin[_currentPikminIndex]);
+        this.gameObject.GetComponent<SignalController>().LittleDude = _sortedPikmin[_currentPikminIndex];
+        this.gameObject.GetComponent<SignalController>().Activate();
     }
 
     void ReturnToPlayer()
     {
         _sortedPikmin.Clear();
         _currentPikminIndex = -1;
+        
+        this.gameObject.GetComponent<SignalController>().Deactivate();
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) PossessPlayer(player);
