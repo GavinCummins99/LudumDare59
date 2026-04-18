@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
+using Unity.Cinemachine;
 using UnityEditor.UI;
 
 public class SwitchCharacter : MonoBehaviour
@@ -12,6 +13,7 @@ public class SwitchCharacter : MonoBehaviour
     private List<GameObject> _sortedPikmin = new List<GameObject>();
     private int _currentPikminIndex = -1;
     private const float HoldThreshold = 1f;
+    private GameObject cameraManager;
 
     void Start()
     {
@@ -22,6 +24,8 @@ public class SwitchCharacter : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) PossessPlayer(player);
+        
+        cameraManager = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     void Update()
@@ -58,6 +62,8 @@ public class SwitchCharacter : MonoBehaviour
 
     void CycleToNextPikmin()
     {
+        //get cinemachine target group reference
+        CinemachineTargetGroup group = cameraManager.GetComponentInChildren<CinemachineTargetGroup>();
         
         // Build list from main player position if we're on the main player
         if (_sortedPikmin.Count == 0)
@@ -67,22 +73,44 @@ public class SwitchCharacter : MonoBehaviour
 
         this.gameObject.GetComponent<SignalController>().Deactivate();
         
-        
         _currentPikminIndex = (_currentPikminIndex + 1) % _sortedPikmin.Count;
-        PossessPlayer(_sortedPikmin[_currentPikminIndex]);
-        this.gameObject.GetComponent<SignalController>().LittleDude = _sortedPikmin[_currentPikminIndex];
-
+        GameObject currentPikmin = _sortedPikmin[_currentPikminIndex].gameObject;
+        
+        PossessPlayer(currentPikmin);
+        this.gameObject.GetComponent<SignalController>().LittleDude = currentPikmin;
+    
+        //if player character, activate signal controller
         if (gameObject.CompareTag("Player"))
         {
+            if (group.Targets.Count > 1)
+            {
+                group.Targets.RemoveRange(1, group.Targets.Count - 1);
+            }
             this.gameObject.GetComponent<SignalController>().Activate();
+            
+            //if cameraManager is also valid add the little dude to the target group
+            if(cameraManager)
+            {
+                group.AddMember(currentPikmin.transform, 1f, 0.5f);
+            }
+            
         }
+       
+       
        
     }
 
-    void ReturnToPlayer()
+    public void ReturnToPlayer()
     {
         _sortedPikmin.Clear();
         _currentPikminIndex = -1;
+        
+        //get cinemachine target group reference
+        CinemachineTargetGroup group = cameraManager.GetComponentInChildren<CinemachineTargetGroup>();
+        if (group.Targets.Count > 1)
+        {
+            group.Targets.RemoveRange(1, group.Targets.Count - 1);
+        }
         
         this.gameObject.GetComponent<SignalController>().Deactivate();
 

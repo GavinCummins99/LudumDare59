@@ -6,6 +6,7 @@ public class SignalController : MonoBehaviour
     public Transform endPoint;
     public GameObject LittleDude;
     public GameObject ribbonPrefab;
+    public float MaxDistance = 10f;
 
     private GameObject ribbon;
     private Material mat;
@@ -36,6 +37,11 @@ public class SignalController : MonoBehaviour
 
         // stretch along X
         ribbon.transform.localScale = new Vector3(length, 1f, 0f);
+
+        if (length > MaxDistance)
+        {
+            gameObject.GetComponent<SwitchCharacter>().ReturnToPlayer();
+        }
 
         // rotate to face from start to end
         float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
