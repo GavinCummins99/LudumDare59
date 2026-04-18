@@ -4,6 +4,9 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player2D : MonoBehaviour
 {
+
+    public bool Possesed = false;
+
     [Header("Input")]
     public InputActionAsset inputActions;
 
@@ -35,6 +38,8 @@ public class Player2D : MonoBehaviour
     private float coyoteTimer;
     private float jumpBufferTimer;
     private float defaultGravityScale;
+
+    public float Weight = 1;
 
     void Awake()
     {
@@ -73,6 +78,9 @@ public class Player2D : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!Possesed) return;
+        Debug.Log("print");
+
         // ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
 
@@ -90,7 +98,7 @@ public class Player2D : MonoBehaviour
 
         // flip sprite to face movement direction
         if (moveInput.x != 0f)
-            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1f, 1f);
+            //transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1f, 1f);
 
         // jump
         if (jumpBufferTimer > 0f && coyoteTimer > 0f)
