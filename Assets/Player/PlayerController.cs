@@ -79,7 +79,6 @@ public class Player2D : MonoBehaviour
     void FixedUpdate()
     {
         if (!Possesed) return;
-        Debug.Log("print");
 
         // ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
