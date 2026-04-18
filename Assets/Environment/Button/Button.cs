@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
 
-public class PressurePlate : MonoBehaviour
+public class Button : MonoBehaviour
 {
     public UnityEvent OnPressed;
     public UnityEvent OnReleased;
