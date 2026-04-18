@@ -39,6 +39,8 @@ public class Player2D : MonoBehaviour
     private float jumpBufferTimer;
     private float defaultGravityScale;
 
+    public float Weight = 1;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
