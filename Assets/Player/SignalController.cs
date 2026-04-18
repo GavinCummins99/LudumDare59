@@ -25,7 +25,7 @@ public class SignalController : MonoBehaviour
         if (!startPoint || !LittleDude || !ribbon) return;
 
         Vector3 start = startPoint.position;
-        endPoint = LittleDude.transform.Find("SignalEnd");
+        endPoint = LittleDude.transform.Find("SignalPoint");
         Vector3 end = endPoint.position;
 
         Vector3 dir = end - start;

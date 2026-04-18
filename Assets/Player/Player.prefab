@@ -485,7 +485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1860772721961186489}
   m_Layer: 10
-  m_Name: SignalStart
+  m_Name: SignalPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
