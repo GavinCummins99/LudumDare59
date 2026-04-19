@@ -47,7 +47,7 @@ PrefabInstance:
     - target: {fileID: 2776802948618208602, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_Name
-      value: Intelligence Variant
+      value: Intelligence
       objectReference: {fileID: 0}
     - target: {fileID: 2776802948618208602, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -63,6 +63,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.0695572
+      objectReference: {fileID: 0}
+    - target: {fileID: 3368823794853490870, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -2830
+      objectReference: {fileID: 0}
+    - target: {fileID: 3368823794853490870, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 505
+      objectReference: {fileID: 0}
+    - target: {fileID: 4759200267143881821, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: irisImage
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -171,7 +186,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 794550403482773661, guid: ded2c49a640c70249bc0341af8e2dd9c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ded2c49a640c70249bc0341af8e2dd9c, type: 3}
