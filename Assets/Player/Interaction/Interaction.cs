@@ -105,11 +105,7 @@ public class Interaction : MonoBehaviour
         if (Player != null && !Player.Possesed) return;
         Debug.Log("Invoking on " + CurrentTarget.gameObject.name);
         CurrentTarget.Interacted.Invoke();
-
-        if (gameObject.GetComponent<AudioSource>() != null)
-        {
-            gameObject.GetComponent<AudioSource>().Play();
-        }
+        
     }
 
     void OnDrawGizmosSelected()

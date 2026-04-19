@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.InputSystem;
 
 public class Strong : MonoBehaviour
@@ -10,6 +11,7 @@ public class Strong : MonoBehaviour
     public float PunchTime = 1.0f;
     public float UnlockTime = 1.97f;
     public float PunchRange = 2f;
+    public AudioClip SplosionSound;
 
     void Start()
     {
@@ -50,10 +52,10 @@ public class Strong : MonoBehaviour
         RaycastHit2D[] Hits = Physics2D.RaycastAll(transform.position, Direction, PunchRange);
         foreach (RaycastHit2D Hit in Hits)
         {
-            Debug.Log("Raycast hit: " + Hit.collider.gameObject.name);
             if (Hit.collider.gameObject.name == "Rock")
             {
                 Destroy(Hit.collider.gameObject);
+                GetComponentInChildren<AudioSource>().PlayOneShot(SplosionSound);
                 break;
             }
         }
