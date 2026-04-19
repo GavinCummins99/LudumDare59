@@ -20,7 +20,7 @@ public class Pipe : MonoBehaviour
         // Walk to pipe entrance and wait until arrived
         if (Player != null)
         {
-            Player.WalkToPoint(transform.position);
+            Player.WalkToPoint(transform.position, 1.5f);
             yield return new WaitUntil(() => !Player.IsWalking);
         }
 

@@ -34,6 +34,7 @@ public class Player2D : MonoBehaviour
     public float Weight = 1;
     // Auto walk
     private Vector2 WalkTarget;
+    private Vector2 OriginalWalkTarget;
     public bool IsWalking = false;
     private float WalkStopThreshold = 0.1f;
 
@@ -68,9 +69,19 @@ public class Player2D : MonoBehaviour
     void OnEnable() => playerMap.Enable();
     void OnDisable() => playerMap.Disable();
 
+    // Basic walk to point
     public void WalkToPoint(Vector2 Target)
     {
-        WalkTarget = Target;
+        WalkToPoint(Target, 0.1f);
+    }
+
+    // Walk to point with a side offset — stops that many units away from the target
+    public void WalkToPoint(Vector2 Target, float StopDistance)
+    {
+        OriginalWalkTarget = Target;
+        float Direction = Mathf.Sign(Target.x - transform.position.x);
+        WalkTarget = new Vector2(Target.x - (Direction * StopDistance), Target.y);
+        WalkStopThreshold = 0.1f;
         IsWalking = true;
     }
 
@@ -100,9 +111,12 @@ public class Player2D : MonoBehaviour
             float Diff = WalkTarget.x - transform.position.x;
             if (Mathf.Abs(Diff) <= WalkStopThreshold)
             {
-                // reached target, stop walking
+                // reached target, stop walking and face the original target point
                 IsWalking = false;
                 rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+                float FaceDir = Mathf.Sign(OriginalWalkTarget.x - transform.position.x);
+                if (FaceDir != 0f)
+                    transform.localScale = new Vector3(FaceDir, 1f, 1f);
             }
             else
             {
