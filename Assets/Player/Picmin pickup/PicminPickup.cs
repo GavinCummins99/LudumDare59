@@ -14,7 +14,7 @@ public class CursorManager : MonoBehaviour
 
     void Start()
     {
-        TargetCamera = FindFirstObjectByType<Camera>();
+        TargetCamera = FindAnyObjectByType<Camera>();
         SetCursor(DefaultCursor);
     }
 
@@ -22,7 +22,7 @@ public class CursorManager : MonoBehaviour
     {
         if (CurrentCursor == Texture) return;
         CurrentCursor = Texture;
-        Debug.Log("Setting cursor to: " + Texture);
+        //Debug.Log("Setting cursor to: " + Texture);
         Cursor.SetCursor(Texture, CursorHotspot, CursorMode.Auto);
     }
 

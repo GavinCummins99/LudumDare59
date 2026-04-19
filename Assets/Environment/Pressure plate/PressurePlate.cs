@@ -47,6 +47,11 @@ public class PressurePlate : MonoBehaviour
             _isPressed = true;
             GetComponentInChildren<SpriteRenderer>().transform.localScale = new Vector3(1, .1f, 1);
             OnPressed.Invoke();
+
+            if (gameObject.GetComponentInChildren<AudioSource>() != null)
+            {
+                gameObject.GetComponentInChildren<AudioSource>().Play();
+            }
         }
         else if (!shouldPress && _isPressed) {
             _isPressed = false;
