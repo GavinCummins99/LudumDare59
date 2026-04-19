@@ -689,12 +689,12 @@ PrefabInstance:
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 11.88
+      value: 9.55
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.074985
+      value: -2.03
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -1558,12 +1558,12 @@ PrefabInstance:
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.27
+      value: 12.47
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.40546
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -1870,7 +1870,7 @@ PrefabInstance:
     - target: {fileID: 875743203696219551, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.737389
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 2303351282924367505, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
@@ -1880,12 +1880,47 @@ PrefabInstance:
     - target: {fileID: 2303351282924367505, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
       propertyPath: Targets.Array.data[0].Radius
-      value: 4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 3417532130982576695, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
       propertyPath: orthographic
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417532130982576695, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417532130982576695, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417532130982576695, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3417532130982576695, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: orthographic size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177736718541980868, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.08433
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177736718541980868, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.8381693
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177736718541980868, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 4210658611078830679, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
@@ -1947,6 +1982,31 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainCamera
       objectReference: {fileID: 0}
+    - target: {fileID: 6673152549030736095, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: field of view
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673152549030736095, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: far clip plane
+      value: 5000
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673152549030736095, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673152549030736095, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: orthographic size
+      value: 4.8499985
+      objectReference: {fileID: 0}
+    - target: {fileID: 6907817614709390074, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: Lens.ModeOverride
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7551810111910652579, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1957,15 +2017,60 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.071829796
       objectReference: {fileID: 0}
+    - target: {fileID: 7551810111910652579, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668849130211800331, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: FramingSize
+      value: 0.365
+      objectReference: {fileID: 0}
     - target: {fileID: 7668849130211800331, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
       propertyPath: DollyRange.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 7668849130211800331, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: CenterOffset.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668849130211800331, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: CenterOffset.y
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668849130211800331, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: OrthoSizeRange.x
+      value: 4.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 7668849130211800331, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: OrthoSizeRange.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994932579101950638, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: LensModeOverride.Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8994932579101950638, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: LensModeOverride.DefaultMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6069817668429195338, guid: 8b790eda66b25bb47924b9c22144c0c7, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4350227370626718993, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1676974525}
   m_SourcePrefab: {fileID: 100100000, guid: 8b790eda66b25bb47924b9c22144c0c7, type: 3}
 --- !u!4 &1452095667 stripped
 Transform:
@@ -2162,6 +2267,43 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1676974519 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4350227370626718993, guid: 8b790eda66b25bb47924b9c22144c0c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1405789883}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1676974525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676974519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886251e9a18ece04ea8e61686c173e1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachinePositionComposer
+  CameraDistance: 10
+  DeadZoneDepth: 0
+  Composition:
+    ScreenPosition: {x: 0, y: 0}
+    DeadZone:
+      Enabled: 0
+      Size: {x: 0.2, y: 0.2}
+    HardLimits:
+      Enabled: 0
+      Size: {x: 0.8, y: 0.8}
+      Offset: {x: 0, y: 0}
+  CenterOnActivate: 1
+  TargetOffset: {x: 0, y: 0, z: 0}
+  Damping: {x: 1, y: 1, z: 1}
+  Lookahead:
+    Enabled: 0
+    Time: 0
+    Smoothing: 0
+    IgnoreY: 0
 --- !u!1001 &1707645718
 PrefabInstance:
   m_ObjectHideFlags: 0
