@@ -13,10 +13,12 @@ public class Interaction : MonoBehaviour
     private InputAction InteractAction;
     private GameObject CurrentUIInstance;
     private Interaction CurrentTarget;
+    private Player2D Player;
 
     void Start()
     {
         if (!CanInteract) return;
+        Player = GetComponent<Player2D>();
         InteractAction = new InputAction("Interact", binding: "<Keyboard>/e");
         InteractAction.performed += _ => DoInteract();
         InteractAction.Enable();
@@ -25,6 +27,17 @@ public class Interaction : MonoBehaviour
     void Update()
     {
         if (!CanInteract) return;
+        // Only allow interaction if Player2D is possessed
+        if (Player != null && !Player.Possesed)
+        {
+            if (CurrentUIInstance != null)
+            {
+                Destroy(CurrentUIInstance);
+                CurrentUIInstance = null;
+            }
+            CurrentTarget = null;
+            return;
+        }
 
         Collider2D[] Hits = Physics2D.OverlapCircleAll(transform.position, 5f);
         Interaction NearestTarget = null;
@@ -33,7 +46,6 @@ public class Interaction : MonoBehaviour
         {
             if (Hit.gameObject == gameObject) continue;
             Interaction Other = Hit.GetComponent<Interaction>();
-
             // Check UserName on the target - if set, only this gameobject's name can interact with it
             if (Other != null && !Other.CanInteract &&
                (string.IsNullOrEmpty(Other.UserName) || Other.UserName == gameObject.name))
@@ -88,6 +100,8 @@ public class Interaction : MonoBehaviour
     void DoInteract()
     {
         if (CurrentTarget == null) return;
+        // Block interaction if not possessed
+        if (Player != null && !Player.Possesed) return;
         Debug.Log("Invoking on " + CurrentTarget.gameObject.name);
         CurrentTarget.Interacted.Invoke();
     }
