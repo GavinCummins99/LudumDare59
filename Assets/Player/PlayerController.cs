@@ -37,6 +37,9 @@ public class Player2D : MonoBehaviour
     private Vector2 OriginalWalkTarget;
     public bool IsWalking = false;
     private float WalkStopThreshold = 0.1f;
+    
+    [Header("Sounds")]
+    public AudioClip[] Swooshes;
 
     void Awake()
     {
@@ -75,7 +78,7 @@ public class Player2D : MonoBehaviour
         WalkToPoint(Target, 0.1f);
     }
 
-    // Walk to point with a side offset — stops that many units away from the target
+    // Walk to point with a side offset ï¿½ stops that many units away from the target
     public void WalkToPoint(Vector2 Target, float StopDistance)
     {
         OriginalWalkTarget = Target;
@@ -149,5 +152,13 @@ public class Player2D : MonoBehaviour
             rb.gravityScale = defaultGravityScale;
         // update animator
         UpdateAnimator();
+    }
+
+    public void PlaySwoosh(int pipe)
+    {
+        if (pipe < 0 || pipe >= Swooshes.Length) return;
+
+        GetComponentInChildren<AudioSource>().PlayOneShot(Swooshes[pipe]);
+
     }
 }
