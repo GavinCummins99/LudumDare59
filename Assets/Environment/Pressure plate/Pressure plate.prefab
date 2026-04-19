@@ -145,7 +145,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   HeavyWeight: 0
-  WeightThreshold: 2
+  WeightThreshold: 3
 --- !u!61 &5504432568363552777
 BoxCollider2D:
   m_ObjectHideFlags: 0

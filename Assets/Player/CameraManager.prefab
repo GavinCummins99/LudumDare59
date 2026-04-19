@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3353170275166192574}
   m_Layer: 0
   m_Name: CinemachineCamera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4350227370626718993}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.08433, y: -0.071829796, z: -10}
+  m_LocalPosition: {x: 5.07019, y: -7.08747, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -91,7 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineGroupFraming
   FramingMode: 2
   FramingSize: 0.365
-  CenterOffset: {x: 0, y: -0.6}
+  CenterOffset: {x: 0, y: 0}
   Damping: 2
   SizeAdjustment: 2
   LateralAdjustment: 0
@@ -192,7 +192,7 @@ Transform:
   m_GameObject: {fileID: 7840816891622412487}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.08433, y: 2.8381693, z: -10}
+  m_LocalPosition: {x: 5.07019, y: -7.08747, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,6 +343,7 @@ GameObject:
   m_Component:
   - component: {fileID: 547371596588213316}
   - component: {fileID: 2303351282924367505}
+  - component: {fileID: 6375983781819127653}
   m_Layer: 0
   m_Name: Target Group
   m_TagString: Untagged
@@ -359,7 +360,7 @@ Transform:
   m_GameObject: {fileID: 8442424219471120032}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.08433, y: -0.071829796, z: 0}
+  m_LocalPosition: {x: 5.07019, y: -7.08747, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -385,3 +386,15 @@ MonoBehaviour:
     Weight: 1
     Radius: 0.5
   m_LegacyTargets: []
+--- !u!114 &6375983781819127653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8442424219471120032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c8035964b88e014a9bba596b87f2947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CinemacineHelper
