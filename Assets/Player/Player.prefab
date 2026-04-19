@@ -52,8 +52,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc136fe686ca7f419a97bb947da4b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  Possesed: 0
-  inputActions: {fileID: -944628639613478452, guid: c8fbbf3b8c994064bb9c3d2ea92694af,
+  Possesed: 1
+  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
     type: 3}
   speed: 7
   jumpForce: 6
@@ -208,6 +208,8 @@ MonoBehaviour:
   LittleDude: {fileID: 0}
   ribbonPrefab: {fileID: 8995185567957336216, guid: 566c770a5024d7743861a9501d8c0a89,
     type: 3}
+  MaxDistance: 50
+  DudeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2304681466535270509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +234,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ab06be670679af4c94e707cf8fc1194, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  CanInteract: 1
+  Interacted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5754865514906381168
 GameObject:
   m_ObjectHideFlags: 0

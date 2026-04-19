@@ -7,7 +7,7 @@ public class PressurePlate : MonoBehaviour
     public UnityEvent OnPressed;
     public UnityEvent OnReleased;
     public bool HeavyWeight = false;
-    public float WeightThreshold = 2f;
+    public float WeightThreshold = 3f;
 
     private List<Player2D> _playersOnPlate = new List<Player2D>();
     private bool _isPressed = false;
