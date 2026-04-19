@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5237542729820028187}
   - component: {fileID: 6020621152164864949}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Elevator
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49,6 +49,7 @@ MonoBehaviour:
   Height: 3
   Cyclic: 1
   Vertical: 1
+  SwitchDirection: 0
 --- !u!1 &4470872438772234996
 GameObject:
   m_ObjectHideFlags: 0
@@ -60,7 +61,7 @@ GameObject:
   - component: {fileID: 2481597223200508086}
   - component: {fileID: 2830634486382427350}
   - component: {fileID: 3382999588796164240}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Platform
   m_TagString: Untagged
   m_Icon: {fileID: 0}

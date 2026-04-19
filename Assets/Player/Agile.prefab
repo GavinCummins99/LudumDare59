@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6040076409109905938
+--- !u!1001 &352978238581250785
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,11 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
-        type: 3}
-      propertyPath: Weight
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: Possesed
@@ -42,12 +37,12 @@ PrefabInstance:
     - target: {fileID: 2737324040426259049, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.9126635
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2737324040426259049, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.429485
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2737324040426259049, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -57,7 +52,7 @@ PrefabInstance:
     - target: {fileID: 2776802948618208602, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_Name
-      value: Strong Variant
+      value: Agile Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2776802948618208602, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -67,7 +62,7 @@ PrefabInstance:
     - target: {fileID: 3130806976784769547, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.7279406
+      value: 1.7754648
       objectReference: {fileID: 0}
     - target: {fileID: 3130806976784769547, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -78,7 +73,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6674019215263811114, guid: 65c3e50b1a9590742a37caeab2130c11,
+      objectReference: {fileID: 3532709683551203882, guid: 3501e719ee26ea341bd859719e992ea7,
         type: 3}
     - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -112,23 +107,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8415414567165742361, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
-      propertyPath: DudeColor.r
-      value: 1
+      propertyPath: DudeColor.g
+      value: 0.7176471
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
-      propertyPath: m_LocalScale.x
+      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.31
+      value: 6.38
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1
+      value: 2.324985
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -174,7 +169,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 09935d65c398e90499d88bbab7b19642, type: 2}
+      objectReference: {fileID: 9100000, guid: 78870cf6929503341b4a5285a374f031, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
