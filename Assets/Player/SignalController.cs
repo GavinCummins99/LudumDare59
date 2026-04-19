@@ -23,10 +23,7 @@ public class SignalController : MonoBehaviour
 
     void Update()
     {
-        if (LittleDude)
-        {
-            Debug.Log("LittleDude");
-        }
+        
         if (!startPoint || !LittleDude || !ribbon) return;
 
         Vector3 start = startPoint.position;

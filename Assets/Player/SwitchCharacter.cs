@@ -13,6 +13,7 @@ public class SwitchCharacter : MonoBehaviour
     private List<GameObject> _sortedPikmin = new List<GameObject>();
     private int _currentPikminIndex = -1;
     private const float HoldThreshold = 1f;
+    private const float MaxDistance = 20f;
     private GameObject cameraManager;
 
     void Start()
@@ -24,7 +25,7 @@ public class SwitchCharacter : MonoBehaviour
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if (player != null) PossessPlayer(player);
-
+        
         cameraManager = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
@@ -49,37 +50,45 @@ public class SwitchCharacter : MonoBehaviour
 
     void BuildSortedPikminList()
     {
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player == null) return;
+
+        Vector3 referencePos = player.transform.position;
+
         GameObject[] pikmin = GameObject.FindGameObjectsWithTag("Picmin");
-        _sortedPikmin = new List<GameObject>(pikmin);
+        _sortedPikmin = new List<GameObject>();
+        foreach (GameObject p in pikmin)
+        {
+            if (Vector3.Distance(referencePos, p.transform.position) <= MaxDistance)
+                _sortedPikmin.Add(p);
+        }
+
         _sortedPikmin.Sort((a, b) =>
         {
-            float distA = Vector3.Distance(_currentPlayer.transform.position, a.transform.position);
-            float distB = Vector3.Distance(_currentPlayer.transform.position, b.transform.position);
+            float distA = Vector3.Distance(referencePos, a.transform.position);
+            float distB = Vector3.Distance(referencePos, b.transform.position);
             return distA.CompareTo(distB);
         });
-        _currentPikminIndex = -1;
     }
 
     void CycleToNextPikmin()
     {
         CinemachineTargetGroup group = cameraManager.GetComponentInChildren<CinemachineTargetGroup>();
 
-        if (_sortedPikmin.Count == 0)
-            BuildSortedPikminList();
+        GameObject previousPikmin = (_currentPikminIndex >= 0 && _currentPikminIndex < _sortedPikmin.Count)
+            ? _sortedPikmin[_currentPikminIndex]
+            : null;
+
+        BuildSortedPikminList();
 
         if (_sortedPikmin.Count == 0) return;
 
-        // Remove any null or destroyed pikmin from the list
-        _sortedPikmin.RemoveAll(p => p == null);
-
-        if (_sortedPikmin.Count == 0) return;
+        int resumeIndex = previousPikmin != null ? _sortedPikmin.IndexOf(previousPikmin) : -1;
+        _currentPikminIndex = (resumeIndex + 1) % _sortedPikmin.Count;
 
         this.gameObject.GetComponent<SignalController>().Deactivate();
 
-        _currentPikminIndex = (_currentPikminIndex + 1) % _sortedPikmin.Count;
-        GameObject currentPikmin = _sortedPikmin[_currentPikminIndex];
-
-        if (currentPikmin == null) return;
+        GameObject currentPikmin = _sortedPikmin[_currentPikminIndex].gameObject;
 
         GetComponent<Rigidbody2D>().linearVelocityX = 0;
         PossessPlayer(currentPikmin);
@@ -101,11 +110,11 @@ public class SwitchCharacter : MonoBehaviour
     {
         _sortedPikmin.Clear();
         _currentPikminIndex = -1;
-
+        
         CinemachineTargetGroup group = cameraManager.GetComponentInChildren<CinemachineTargetGroup>();
         if (group.Targets.Count > 1)
             group.Targets.RemoveRange(1, group.Targets.Count - 1);
-
+        
         this.gameObject.GetComponent<SignalController>().Deactivate();
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
