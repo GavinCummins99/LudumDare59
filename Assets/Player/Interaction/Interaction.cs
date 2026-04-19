@@ -6,6 +6,7 @@ public class Interaction : MonoBehaviour
 {
     public bool CanInteract = false;
     public string UserName = "";
+    public float InteractDistance = 5f;
     public UnityEvent Interacted;
     public GameObject UIElementPrefab;
     public float UIHeightOffset = 1f;
@@ -39,7 +40,7 @@ public class Interaction : MonoBehaviour
             return;
         }
 
-        Collider2D[] Hits = Physics2D.OverlapCircleAll(transform.position, 5f);
+        Collider2D[] Hits = Physics2D.OverlapCircleAll(transform.position, InteractDistance);
         Interaction NearestTarget = null;
 
         foreach (Collider2D Hit in Hits)
@@ -109,6 +110,6 @@ public class Interaction : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, 5f);
+        Gizmos.DrawWireSphere(transform.position, InteractDistance);
     }
 }

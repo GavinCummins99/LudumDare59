@@ -41,7 +41,7 @@ public class Player2D : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
+        anim = GetComponentInChildren<Animator>();
         defaultGravityScale = rb.gravityScale;
         playerMap = inputActions.FindActionMap("Player");
         moveAction = playerMap.FindAction("Move");

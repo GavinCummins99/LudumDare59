@@ -24,6 +24,16 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
         type: 3}
+    - target: {fileID: 1860772721961186489, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1860772721961186489, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.41
+      objectReference: {fileID: 0}
     - target: {fileID: 1988186156019863137, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,18 +92,34 @@ PrefabInstance:
     - target: {fileID: 3632896811640384646, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.6470504
+      value: 2.5593004
       objectReference: {fileID: 0}
     - target: {fileID: 3632896811640384646, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_Offset.y
-      value: -0.007832766
+      value: 1.2784805
+      objectReference: {fileID: 0}
+    - target: {fileID: 4699966799683809774, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 65c3e50b1a9590742a37caeab2130c11,
+        type: 3}
+    - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 4.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 6.97
       objectReference: {fileID: 0}
     - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -6674019215263811114, guid: 65c3e50b1a9590742a37caeab2130c11,
+      objectReference: {fileID: 21300000, guid: 65c3e50b1a9590742a37caeab2130c11,
         type: 3}
     - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -110,6 +136,11 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7364410106357023662, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 09935d65c398e90499d88bbab7b19642, type: 2}
     - target: {fileID: 7810160886688199847, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -143,7 +174,7 @@ PrefabInstance:
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.8366685
+      value: 4.78
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -193,5 +224,30 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2776802948618208602, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3545645785948532735}
   m_SourcePrefab: {fileID: 100100000, guid: ded2c49a640c70249bc0341af8e2dd9c, type: 3}
+--- !u!1 &8456501090107770696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2776802948618208602, guid: ded2c49a640c70249bc0341af8e2dd9c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6040076409109905938}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3545645785948532735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456501090107770696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ae3ff742d101e4bb0f11916a9e54df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  PunchTime: 1
+  UnlockTime: 1.97
+  PunchRange: 2
