@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7551810111910652579}
   - component: {fileID: 6907817614709390074}
-  - component: {fileID: 5513940534480664435}
   - component: {fileID: 7668849130211800331}
   - component: {fileID: 3417532130982576695}
   - component: {fileID: 2065029332322459286}
@@ -79,25 +78,6 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
---- !u!114 &5513940534480664435
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4350227370626718993}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineFollow
-  TrackerSettings:
-    BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
-    AngularDampingMode: 0
-    RotationDamping: {x: 1, y: 1, z: 1}
-    QuaternionDamping: 1
-  FollowOffset: {x: 0, y: 0, z: -10}
 --- !u!114 &7668849130211800331
 MonoBehaviour:
   m_ObjectHideFlags: 0
