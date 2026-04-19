@@ -32,6 +32,10 @@ public class Player2D : MonoBehaviour
     private float jumpBufferTimer;
     private float defaultGravityScale;
     public float Weight = 1;
+    // Auto walk
+    private Vector2 WalkTarget;
+    public bool IsWalking = false;
+    private float WalkStopThreshold = 0.1f;
 
     void Awake()
     {
@@ -64,11 +68,17 @@ public class Player2D : MonoBehaviour
     void OnEnable() => playerMap.Enable();
     void OnDisable() => playerMap.Disable();
 
+    public void WalkToPoint(Vector2 Target)
+    {
+        WalkTarget = Target;
+        IsWalking = true;
+    }
+
     void UpdateAnimator()
     {
         if (anim == null) return;
-        // Set Walking param based on whether we have horizontal input
-        anim.SetBool("Walking", moveInput.x != 0f);
+        // Set Walking param based on whether we have horizontal input or are auto walking
+        anim.SetBool("Walking", moveInput.x != 0f || IsWalking);
     }
 
     void FixedUpdate()
@@ -83,11 +93,34 @@ public class Player2D : MonoBehaviour
             coyoteTimer -= Time.fixedDeltaTime;
         // tick the jump buffer down every physics step
         jumpBufferTimer -= Time.fixedDeltaTime;
-        // horizontal movement
-        rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
-        // flip sprite to face movement direction
-        if (moveInput.x != 0f)
-            transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1f, 1f);
+
+        // auto walk overrides manual input
+        if (IsWalking)
+        {
+            float Diff = WalkTarget.x - transform.position.x;
+            if (Mathf.Abs(Diff) <= WalkStopThreshold)
+            {
+                // reached target, stop walking
+                IsWalking = false;
+                rb.linearVelocity = new Vector2(0f, rb.linearVelocity.y);
+            }
+            else
+            {
+                // walk towards target
+                float Dir = Mathf.Sign(Diff);
+                rb.linearVelocity = new Vector2(Dir * speed, rb.linearVelocity.y);
+                transform.localScale = new Vector3(Dir, 1f, 1f);
+            }
+        }
+        else
+        {
+            // horizontal movement
+            rb.linearVelocity = new Vector2(moveInput.x * speed, rb.linearVelocity.y);
+            // flip sprite to face movement direction
+            if (moveInput.x != 0f)
+                transform.localScale = new Vector3(Mathf.Sign(moveInput.x), 1f, 1f);
+        }
+
         // jump
         if (jumpBufferTimer > 0f && coyoteTimer > 0f)
         {

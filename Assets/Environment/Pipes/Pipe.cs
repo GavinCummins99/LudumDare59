@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Pipe : MonoBehaviour
 {
@@ -6,24 +7,31 @@ public class Pipe : MonoBehaviour
 
     public void UsePipe()
     {
-        StartCoroutine(TeleportDelay());
+        StartCoroutine(PipeSequence());
     }
 
-    private System.Collections.IEnumerator TeleportDelay()
+    private IEnumerator PipeSequence()
     {
         GameObject Agile = GameObject.Find("Agile");
-        if (Agile != null)
+        if (Agile == null) yield break;
+
+        Player2D Player = Agile.GetComponent<Player2D>();
+
+        // Walk to pipe entrance and wait until arrived
+        if (Player != null)
         {
-            Animator Anim = Agile.GetComponent<Animator>();
-            if (Anim != null)
-                Anim.SetTrigger("Special");
+            Player.WalkToPoint(transform.position);
+            yield return new WaitUntil(() => !Player.IsWalking);
         }
+
+        // Play animation and wait 1.5s
+        Animator Anim = Agile.GetComponent<Animator>();
+        if (Anim != null)
+            Anim.SetTrigger("Special");
 
         yield return new WaitForSeconds(1.5f);
 
-        if (Agile != null)
-        {
-            Agile.transform.position = ConnectedPipe.transform.position;
-        }
+        // Teleport to connected pipe
+        Agile.transform.position = ConnectedPipe.transform.position;
     }
 }
