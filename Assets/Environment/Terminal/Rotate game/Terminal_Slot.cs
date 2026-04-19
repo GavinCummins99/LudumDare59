@@ -4,16 +4,15 @@ using UnityEngine.EventSystems;
 
 public class Terminal_Slot : MonoBehaviour
 {
-
     bool CanClick = true;
 
     void Start()
     {
-        EventTrigger trigger = gameObject.AddComponent<EventTrigger>();
-        EventTrigger.Entry entry = new EventTrigger.Entry();
-        entry.eventID = EventTriggerType.PointerClick;
-        entry.callback.AddListener(_ => OnClicked());
-        trigger.triggers.Add(entry);
+        EventTrigger Trigger = gameObject.AddComponent<EventTrigger>();
+        EventTrigger.Entry Entry = new EventTrigger.Entry();
+        Entry.eventID = EventTriggerType.PointerClick;
+        Entry.callback.AddListener(_ => OnClicked());
+        Trigger.triggers.Add(Entry);
     }
 
     void OnClicked()
@@ -38,6 +37,6 @@ public class Terminal_Slot : MonoBehaviour
 
         transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, TargetZ);
         CanClick = true;
-        transform.parent.GetComponent<Terminal_RotateGame>().CheckWin();
+        GetComponentInParent<Terminal_RotateGame>().CheckWin();
     }
 }
