@@ -34,7 +34,20 @@ public class CursorManager : MonoBehaviour
     void Update()
     {
         if (TargetCamera == null) return;
-        if (Player == null || !Player.Possesed) return;
+
+        if (Player == null || !Player.Possesed)
+        {
+            // Not possessed, release anything held and reset cursor
+            if (HeldPicmin != null)
+            {
+                if (HeldRigidbody != null)
+                    HeldRigidbody.gravityScale = 1f;
+                HeldPicmin = null;
+                HeldRigidbody = null;
+            }
+            SetCursor(DefaultCursor);
+            return;
+        }
 
         Vector2 MousePos = Mouse.current.position.ReadValue();
         Vector2 WorldPos = TargetCamera.ScreenToWorldPoint(MousePos);
