@@ -7,7 +7,8 @@ public class SignalController : MonoBehaviour
     public GameObject LittleDude;
     public GameObject ribbonPrefab;
     public float MaxDistance = 10f;
-
+    public Color DudeColor;
+    
     private GameObject ribbon;
     private Material mat;
 
@@ -15,6 +16,9 @@ public class SignalController : MonoBehaviour
     {
         ribbon = Instantiate(ribbonPrefab);
         mat = ribbon.GetComponent<Renderer>().material;
+        
+        if(LittleDude)
+            mat.SetColor("_DudeColor", LittleDude.GetComponent<SignalController>().DudeColor);
     }
 
     void Update()
