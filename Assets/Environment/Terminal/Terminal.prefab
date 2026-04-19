@@ -108,6 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Interaction
   CanInteract: 0
+  UserName: Intelligence
   Interacted:
     m_PersistentCalls:
       m_Calls:
@@ -123,6 +124,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  UIElementPrefab: {fileID: 4187614593070357553, guid: eb775c56d96523f44867fe2b37b21077,
+    type: 3}
+  UIHeightOffset: 1.4
 --- !u!61 &7823073727096376595
 BoxCollider2D:
   m_ObjectHideFlags: 0

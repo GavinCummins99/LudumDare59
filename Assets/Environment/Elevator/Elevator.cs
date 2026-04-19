@@ -9,6 +9,7 @@ public class Elevator : MonoBehaviour {
     public int Height = 3;
     public bool Cyclic = true;
     public bool Vertical = true;
+    public bool SwitchDirection = false;
 
     //Object private variables
     Vector3 StartPoint;
@@ -31,6 +32,9 @@ public class Elevator : MonoBehaviour {
         StartPoint = new Vector3(transform.position.x, transform.position.y + .25f, transform.position.z); 
         EndPoint = Vertical ? new Vector3(transform.position.x, transform.position.y - .25f + Height, transform.position.z) : new Vector3(transform.position.x - 3f + Height, transform.position.y + .25f, transform.position.z);
 
+
+        if (SwitchDirection) Platform.transform.position = EndPoint;
+        else Platform.transform.position = StartPoint;
     }
 
     //Sets the elevator state to moving or not moving 
@@ -45,7 +49,7 @@ public class Elevator : MonoBehaviour {
     IEnumerator MoveElevator() {
         //Setup variables for movement
         float Elapsed = 0f;
-        float Speed = .5f * Height;
+        float Speed = .5f * Vector3.Distance(Platform.transform.position, UpDirection ? EndPoint : StartPoint);
         Vector3 Start = Platform.transform.position;
 
         //Do movement over time
