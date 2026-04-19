@@ -75,7 +75,8 @@ public class SwitchCharacter : MonoBehaviour
         
         _currentPikminIndex = (_currentPikminIndex + 1) % _sortedPikmin.Count;
         GameObject currentPikmin = _sortedPikmin[_currentPikminIndex].gameObject;
-        
+
+        GetComponent<Rigidbody2D>().linearVelocityX = 0;
         PossessPlayer(currentPikmin);
         this.gameObject.GetComponent<SignalController>().LittleDude = currentPikmin;
     
@@ -121,7 +122,11 @@ public class SwitchCharacter : MonoBehaviour
     void PossessPlayer(GameObject target)
     {
         foreach (GameObject obj in GameObject.FindGameObjectsWithTag("Picmin"))
+        {
+            obj.GetComponent<Rigidbody2D>().linearVelocityX = 0;
             Unpossess(obj);
+        }
+
         GameObject mainPlayer = GameObject.FindGameObjectWithTag("Player");
         if (mainPlayer != null) Unpossess(mainPlayer);
 
