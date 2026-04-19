@@ -15,10 +15,12 @@ public class CursorManager : MonoBehaviour
     private Texture2D CurrentCursor;
     private GameObject HeldPicmin;
     private Rigidbody2D HeldRigidbody;
+    private Player2D Player;
 
     void Start()
     {
         TargetCamera = FindFirstObjectByType<Camera>();
+        Player = GetComponent<Player2D>();
         SetCursor(DefaultCursor);
     }
 
@@ -32,9 +34,9 @@ public class CursorManager : MonoBehaviour
     void Update()
     {
         if (TargetCamera == null) return;
+        if (Player == null || !Player.Possesed) return;
 
         Vector2 MousePos = Mouse.current.position.ReadValue();
-        MousePos.y += VerticalOffset;
         Vector2 WorldPos = TargetCamera.ScreenToWorldPoint(MousePos);
         WorldPos.y -= VerticalOffset;
 
