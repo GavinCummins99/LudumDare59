@@ -26,7 +26,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9184366741856931759}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_ChildAlignment: 0
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 75, y: 75}
+  m_CellSize: {x: 210, y: 210}
   m_Spacing: {x: 5, y: 5}
   m_Constraint: 2
   m_ConstraintCount: 3
@@ -210,6 +210,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5472443797514347063, guid: 91bacacd1eed45b4d89137e984638888,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -334,6 +340,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -3038359690397027787, guid: eac015e0141af97429ada207dd772040,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -458,6 +475,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6675477270728047553, guid: ffa03b42c36cf1741b8eaacd3a181ec8,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -582,6 +605,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -6106029046533704512, guid: c63d5b2741aef5e4988bc037afeb639c,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -706,6 +735,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 3416408142730544738, guid: 344addc29137283499bc92afd65567b9,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -830,6 +865,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4795037113826630188, guid: 21b64fe68b2c3a44fa5a4e7e267b4364,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -954,6 +995,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5457489458006556246, guid: d7af5a0a5381ff748aba447eb94c0569,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1078,6 +1125,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1144630084360787110, guid: 5819dd99af03f5e4dbc0816ce1cad99d,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1202,6 +1255,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slot (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6764961926743612103, guid: d2dc69805b62aa94f866a0bde748e971,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8550166363211030770, guid: 83442f6265316e144b366171eb279390,
+        type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

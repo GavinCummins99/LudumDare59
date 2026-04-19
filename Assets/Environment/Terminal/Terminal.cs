@@ -20,6 +20,6 @@ public class Terminal : MonoBehaviour
         SpawnedTerminal.transform.localScale = Vector3.one;
         SpawnedTerminal.transform.localPosition = Vector3.zero;
 
-        CreateGame(SpawnedTerminal.transform);
+        CreateGame(SpawnedTerminal.transform.Find("Pivot").transform);
     }
 }
