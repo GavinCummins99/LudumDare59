@@ -437,6 +437,8 @@ MonoBehaviour:
   ClickCursor: {fileID: 2800000, guid: fa06be323b96fe84195edef2376db883, type: 3}
   CursorHotspot: {x: 0, y: 0}
   HoverRadius: 0.5
+  FollowSpeed: 10
+  VerticalOffset: 1.1
 --- !u!1 &5053560563194327144
 GameObject:
   m_ObjectHideFlags: 0

@@ -8,9 +8,13 @@ public class CursorManager : MonoBehaviour
     public Texture2D ClickCursor;
     public Vector2 CursorHotspot = Vector2.zero;
     public float HoverRadius = 0.5f;
+    public float FollowSpeed = 10f;
+    public float VerticalOffset = 0f;
 
     private Camera TargetCamera;
     private Texture2D CurrentCursor;
+    private GameObject HeldPicmin;
+    private Rigidbody2D HeldRigidbody;
 
     void Start()
     {
@@ -22,7 +26,6 @@ public class CursorManager : MonoBehaviour
     {
         if (CurrentCursor == Texture) return;
         CurrentCursor = Texture;
-        Debug.Log("Setting cursor to: " + Texture);
         Cursor.SetCursor(Texture, CursorHotspot, CursorMode.Auto);
     }
 
@@ -31,11 +34,42 @@ public class CursorManager : MonoBehaviour
         if (TargetCamera == null) return;
 
         Vector2 MousePos = Mouse.current.position.ReadValue();
+        MousePos.y += VerticalOffset;
         Vector2 WorldPos = TargetCamera.ScreenToWorldPoint(MousePos);
+        WorldPos.y -= VerticalOffset;
 
-        Collider2D Hit = Physics2D.OverlapCircle(WorldPos, HoverRadius);
+        Collider2D Hit = Physics2D.OverlapCircle(TargetCamera.ScreenToWorldPoint(Mouse.current.position.ReadValue()), HoverRadius);
         bool OverPicmin = Hit != null && Hit.CompareTag("Picmin");
 
+        // Pick up picmin on click
+        if (Mouse.current.leftButton.wasPressedThisFrame && OverPicmin && HeldPicmin == null)
+        {
+            HeldPicmin = Hit.gameObject;
+            HeldRigidbody = HeldPicmin.GetComponent<Rigidbody2D>();
+            if (HeldRigidbody != null)
+            {
+                HeldRigidbody.gravityScale = 0f;
+                HeldRigidbody.linearVelocity = Vector2.zero;
+            }
+        }
+
+        // Release picmin on mouse up
+        if (Mouse.current.leftButton.wasReleasedThisFrame && HeldPicmin != null)
+        {
+            if (HeldRigidbody != null)
+                HeldRigidbody.gravityScale = 1f;
+            HeldPicmin = null;
+            HeldRigidbody = null;
+        }
+
+        // Smoothly lerp held picmin to mouse position with vertical offset
+        if (HeldPicmin != null)
+        {
+            Vector2 SmoothedPos = Vector2.Lerp(HeldRigidbody.position, WorldPos, Time.deltaTime * FollowSpeed);
+            HeldRigidbody.MovePosition(SmoothedPos);
+        }
+
+        // Cursor state
         if (Mouse.current.leftButton.isPressed)
             SetCursor(ClickCursor);
         else if (OverPicmin)
