@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: -6349531133993889457}
   - component: {fileID: 9012606371915284803}
   - component: {fileID: 8275160961908272754}
+  - component: {fileID: 8877019987377833564}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -277,6 +278,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e080f016015d3cc43ab4f5aba097b783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  Canvas: {fileID: 0}
+  textBox: {fileID: 0}
+  messages: []
+--- !u!114 &8877019987377833564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2776802948618208602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0adfecee4534da45bb3c2d833d0e848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
+  DefaultCursor: {fileID: 2800000, guid: 7ddb9706d67a96a4891fea71ddf3751b, type: 3}
+  HoverCursor: {fileID: 2800000, guid: 3a884c88b9941984a8426ea05e69e624, type: 3}
+  CursorHotspot: {x: 0, y: 0}
 --- !u!1 &5754865514906381168
 GameObject:
   m_ObjectHideFlags: 0
