@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8472037009632933239
+--- !u!1 &8365601341645615750
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2970521212352112005}
-  - component: {fileID: 4374792163073810727}
-  - component: {fileID: 5493290584311053345}
-  - component: {fileID: 9111203692641845570}
-  m_Layer: 0
-  m_Name: Trap door
+  - component: {fileID: 3490595688510322150}
+  - component: {fileID: 6102965930068904575}
+  - component: {fileID: 750422336948947021}
+  m_Layer: 8
+  m_Name: RepeatGroundTile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2970521212352112005
+--- !u!4 &3490595688510322150
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8472037009632933239}
+  m_GameObject: {fileID: 8365601341645615750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 34.875, y: -6.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4374792163073810727
+--- !u!212 &6102965930068904575
 SpriteRenderer:
   serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8472037009632933239}
+  m_GameObject: {fileID: 8365601341645615750}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,44 +78,28 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 248099401
-  m_SortingLayer: 1
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2168631974769739013, guid: 6c6f4948e1ed91449a0ee567bca7993a,
+  m_Sprite: {fileID: 1989968753012142377, guid: 51d5558cb5c729b48b1b7edea38a8a70,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 2
+  m_Size: {x: 56.25, y: 3.36}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5493290584311053345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8472037009632933239}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ead7b818052e98447a3feeb6c960a915, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  openTrapDoor: {fileID: -8412991530112906485, guid: 0442eeeaae864fb45b4107b90e924e2c,
-    type: 3}
-  closedTrapDoor: {fileID: 2168631974769739013, guid: 6c6f4948e1ed91449a0ee567bca7993a,
-    type: 3}
---- !u!61 &9111203692641845570
+--- !u!61 &750422336948947021
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8472037009632933239}
+  m_GameObject: {fileID: 8365601341645615750}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -148,11 +131,11 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.81, y: 1.28}
-    newSize: {x: 1, y: 1}
+    oldSize: {x: 7, y: 3.36}
+    newSize: {x: 56.25, y: 3.36}
     adaptiveTilingThreshold: 0.5
-    drawMode: 0
+    drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 8.81, y: 1.28}
+  m_Size: {x: 56.25, y: 3.36}
   m_EdgeRadius: 0

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 165d54dab7fe191479f9bfe6a2f130bb
+guid: efc4876a79d779f4da989e5ff55d6afe
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1554779688152038385
-    second: Grass ground repeater BOOKEND_0
+      213: 2701290273854379772
+    second: Crashed UFO_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass ground repeater BOOKEND_0
+      name: Crashed UFO_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 682
-        height: 336
+        x: 19
+        y: 43
+        width: 661
+        height: 461
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 128, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fb7b4883efa39510800000000000000
-      internalID: 1554779688152038385
+      spriteID: cf6de482139ec7520800000000000000
+      internalID: 2701290273854379772
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2d90f7a72960ac84e8de1706a7d8e9a8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass ground repeater BOOKEND_0: 1554779688152038385
+      Crashed UFO_0: 2701290273854379772
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

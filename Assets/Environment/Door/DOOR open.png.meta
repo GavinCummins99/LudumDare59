@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 165d54dab7fe191479f9bfe6a2f130bb
+guid: c64b7f0d6ce21454badfe6ab94b585ec
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1554779688152038385
-    second: Grass ground repeater BOOKEND_0
+      213: 8783516539416935859
+    second: DOOR open_0
+  - first:
+      213: -7639405577185532569
+    second: DOOR open_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +129,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Grass ground repeater BOOKEND_0
+      name: DOOR open_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 682
-        height: 336
+        x: 376
+        y: 822
+        width: 123
+        height: 201
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 128, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1fb7b4883efa39510800000000000000
-      internalID: 1554779688152038385
+      spriteID: 3bdf6ba61c155e970800000000000000
+      internalID: 8783516539416935859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DOOR open_1
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 116
+        width: 136
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765e7b45a116bf590800000000000000
+      internalID: -7639405577185532569
       vertices: []
       indices: 
       edges: []
@@ -151,7 +176,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2d90f7a72960ac84e8de1706a7d8e9a8
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +186,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Grass ground repeater BOOKEND_0: 1554779688152038385
+      DOOR open_0: 8783516539416935859
+      DOOR open_1: -7639405577185532569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
