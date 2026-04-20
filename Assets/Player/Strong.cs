@@ -1,3 +1,4 @@
+using Unity.Cinemachine;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.InputSystem;
@@ -62,7 +63,7 @@ public class Strong : MonoBehaviour
         {
             if (Hit.collider.gameObject.CompareTag("Rock"))
             {
-                Debug.Log("SMASHHHH");
+                GetComponentInChildren<CinemachineImpulseSource>().GenerateImpulse();
                 GetComponentInChildren<AudioSource>().PlayOneShot(SplosionSound);
                 Destroy(Hit.collider.gameObject);
                 break;

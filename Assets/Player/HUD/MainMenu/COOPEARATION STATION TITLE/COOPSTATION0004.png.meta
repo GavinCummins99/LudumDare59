@@ -1,0 +1,637 @@
+fileFormatVersion: 2
+guid: 2750e0f7560e4e146930446a04ceefdd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3974825286900853978
+    second: COOPSTATION0004_0
+  - first:
+      213: 7428284723278591024
+    second: COOPSTATION0004_1
+  - first:
+      213: 1424699246380725294
+    second: COOPSTATION0004_2
+  - first:
+      213: -1173147233063801822
+    second: COOPSTATION0004_3
+  - first:
+      213: 4363094837622536668
+    second: COOPSTATION0004_4
+  - first:
+      213: -8667476088600825990
+    second: COOPSTATION0004_5
+  - first:
+      213: 4891715748549148421
+    second: COOPSTATION0004_6
+  - first:
+      213: 2745413478878101385
+    second: COOPSTATION0004_7
+  - first:
+      213: 8374370024899291966
+    second: COOPSTATION0004_8
+  - first:
+      213: 4915222725297769124
+    second: COOPSTATION0004_9
+  - first:
+      213: 3314545510835751005
+    second: COOPSTATION0004_10
+  - first:
+      213: -6397889938907946096
+    second: COOPSTATION0004_11
+  - first:
+      213: 2040730629549773069
+    second: COOPSTATION0004_12
+  - first:
+      213: -2450110778922549445
+    second: COOPSTATION0004_13
+  - first:
+      213: -7362485244017961758
+    second: COOPSTATION0004_14
+  - first:
+      213: 8061612013586084740
+    second: COOPSTATION0004_15
+  - first:
+      213: -3011960905348910880
+    second: COOPSTATION0004_16
+  - first:
+      213: 5227664904224887061
+    second: COOPSTATION0004_17
+  - first:
+      213: 1090165943585885945
+    second: COOPSTATION0004_18
+  - first:
+      213: -6682610643278461141
+    second: COOPSTATION0004_19
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: COOPSTATION0004_0
+      rect:
+        serializedVersion: 2
+        x: 1195
+        y: 302
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 623d80a067596d8c0800000000000000
+      internalID: -3974825286900853978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_1
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 231
+        width: 27
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0343b7d5991961760800000000000000
+      internalID: 7428284723278591024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_2
+      rect:
+        serializedVersion: 2
+        x: 878
+        y: 291
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e243a4c8a6c85c310800000000000000
+      internalID: 1424699246380725294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_3
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 222
+        width: 42
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cefff9ec428bfe0800000000000000
+      internalID: -1173147233063801822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_4
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 230
+        width: 31
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd9f4dd53a3dc8c30800000000000000
+      internalID: 4363094837622536668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_5
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 228
+        width: 30
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f61cf6b60f6b780800000000000000
+      internalID: -8667476088600825990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_6
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 230
+        width: 34
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50fb47e4e8dd2e340800000000000000
+      internalID: 4891715748549148421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_7
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 239
+        width: 39
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f3912630ba91620800000000000000
+      internalID: 2745413478878101385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_8
+      rect:
+        serializedVersion: 2
+        x: 774
+        y: 224
+        width: 38
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3b2dc71b2db73470800000000000000
+      internalID: 8374370024899291966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_9
+      rect:
+        serializedVersion: 2
+        x: 825
+        y: 228
+        width: 32
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa0d45d601663440800000000000000
+      internalID: 4915222725297769124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_10
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 231
+        width: 13
+        height: 50
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d580b35b491affd20800000000000000
+      internalID: 3314545510835751005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_11
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 240
+        width: 31
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 093a85f7ff02637a0800000000000000
+      internalID: -6397889938907946096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_12
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 227
+        width: 43
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d01d29002b1225c10800000000000000
+      internalID: 2040730629549773069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_13
+      rect:
+        serializedVersion: 2
+        x: 1037
+        y: 237
+        width: 38
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3f37f15a357ffdd0800000000000000
+      internalID: -2450110778922549445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_14
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 236
+        width: 42
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e4114ebda233d990800000000000000
+      internalID: -7362485244017961758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_15
+      rect:
+        serializedVersion: 2
+        x: 1111
+        y: 231
+        width: 46
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483f1d20a6990ef60800000000000000
+      internalID: 8061612013586084740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_16
+      rect:
+        serializedVersion: 2
+        x: 1149
+        y: 239
+        width: 36
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0705fb38d5336d0800000000000000
+      internalID: -3011960905348910880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_17
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 235
+        width: 10
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 511d91578856c8840800000000000000
+      internalID: 5227664904224887061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_18
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 239
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fe4aa5562c012f00800000000000000
+      internalID: 1090165943585885945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: COOPSTATION0004_19
+      rect:
+        serializedVersion: 2
+        x: 1263
+        y: 230
+        width: 51
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b278423a6099243a0800000000000000
+      internalID: -6682610643278461141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      COOPSTATION0004_0: -3974825286900853978
+      COOPSTATION0004_1: 7428284723278591024
+      COOPSTATION0004_10: 3314545510835751005
+      COOPSTATION0004_11: -6397889938907946096
+      COOPSTATION0004_12: 2040730629549773069
+      COOPSTATION0004_13: -2450110778922549445
+      COOPSTATION0004_14: -7362485244017961758
+      COOPSTATION0004_15: 8061612013586084740
+      COOPSTATION0004_16: -3011960905348910880
+      COOPSTATION0004_17: 5227664904224887061
+      COOPSTATION0004_18: 1090165943585885945
+      COOPSTATION0004_19: -6682610643278461141
+      COOPSTATION0004_2: 1424699246380725294
+      COOPSTATION0004_3: -1173147233063801822
+      COOPSTATION0004_4: 4363094837622536668
+      COOPSTATION0004_5: -8667476088600825990
+      COOPSTATION0004_6: 4891715748549148421
+      COOPSTATION0004_7: 2745413478878101385
+      COOPSTATION0004_8: 8374370024899291966
+      COOPSTATION0004_9: 4915222725297769124
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
