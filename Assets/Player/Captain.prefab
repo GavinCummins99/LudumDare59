@@ -113,6 +113,7 @@ GameObject:
   - component: {fileID: 6902365701923587981}
   - component: {fileID: 4699966799683809774}
   - component: {fileID: 7364410106357023662}
+  - component: {fileID: 4964990664898928518}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -217,6 +218,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4964990664898928518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 592984252086822106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d9ce1be1687a7c4cb31c6601831d83f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationEventRelay
 --- !u!1 &2776802948618208602
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,6 +247,8 @@ GameObject:
   - component: {fileID: -6349531133993889457}
   - component: {fileID: 8275160961908272754}
   - component: {fileID: 8877019987377833564}
+  - component: {fileID: 7214486945377169421}
+  - component: {fileID: 7126387242345704941}
   m_Layer: 10
   m_Name: Captain
   m_TagString: Player
@@ -257,7 +272,6 @@ Transform:
   - {fileID: 1485252252326354438}
   - {fileID: 1860772721961186489}
   - {fileID: 917715693212145696}
-  - {fileID: 1624379768910934817}
   - {fileID: 6902365701923587981}
   - {fileID: 7246820422364273444}
   m_Father: {fileID: 0}
@@ -275,7 +289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   Possesed: 1
-  inputActions: {fileID: -944628639613478452, guid: c8fbbf3b8c994064bb9c3d2ea92694af,
+  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
     type: 3}
   speed: 7
   jumpForce: 6
@@ -290,6 +304,7 @@ MonoBehaviour:
     m_Bits: 256
   Weight: 1
   IsWalking: 0
+  Swooshes: []
 --- !u!50 &5286787014659600961
 Rigidbody2D:
   serializedVersion: 5
@@ -371,7 +386,7 @@ MonoBehaviour:
   LittleDude: {fileID: 0}
   ribbonPrefab: {fileID: 8995185567957336216, guid: 566c770a5024d7743861a9501d8c0a89,
     type: 3}
-  MaxDistance: 50
+  MaxDistance: 20
   DudeColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &2304681466535270509
 MonoBehaviour:
@@ -440,108 +455,34 @@ MonoBehaviour:
   HoverRadius: 0.5
   FollowSpeed: 10
   VerticalOffset: 1.1
---- !u!1 &5053560563194327144
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1624379768910934817}
-  - component: {fileID: 7708236549225121994}
-  - component: {fileID: 8129717004758038218}
-  - component: {fileID: 5915148148005074998}
-  m_Layer: 5
-  m_Name: Canvas
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1624379768910934817
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5053560563194327144}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 8497826280605915232}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
---- !u!223 &7708236549225121994
-Canvas:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5053560563194327144}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_RenderMode: 0
-  m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
-  m_ReceivesEvents: 1
-  m_OverrideSorting: 0
-  m_OverridePixelPerfect: 0
-  m_SortingBucketNormalizedSize: 0
-  m_VertexColorAlwaysGammaSpace: 0
-  m_UseReflectionProbes: 0
-  m_AdditionalShaderChannelsFlag: 0
-  m_UpdateRectTransformForStandalone: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_TargetDisplay: 0
---- !u!114 &8129717004758038218
+--- !u!114 &7214486945377169421
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5053560563194327144}
+  m_GameObject: {fileID: 2776802948618208602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Script: {fileID: 11500000, guid: 4d9ce1be1687a7c4cb31c6601831d83f, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
-  m_ReferencePixelsPerUnit: 100
-  m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
-  m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
-  m_PhysicalUnit: 3
-  m_FallbackScreenDPI: 96
-  m_DefaultSpriteDPI: 96
-  m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
---- !u!114 &5915148148005074998
+  m_EditorClassIdentifier: Assembly-CSharp::AnimationEventRelay
+--- !u!114 &7126387242345704941
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5053560563194327144}
+  m_GameObject: {fileID: 2776802948618208602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Script: {fileID: 11500000, guid: 61ae3ff742d101e4bb0f11916a9e54df, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.GraphicRaycaster
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
+  m_EditorClassIdentifier: '::'
+  PunchTime: 1
+  UnlockTime: 1.97
+  PunchRange: 2
+  SplosionSound: {fileID: 8300000, guid: 32143f67b85876c4c83b5874fbbbff45, type: 3}
 --- !u!1 &5754865514906381168
 GameObject:
   m_ObjectHideFlags: 0
