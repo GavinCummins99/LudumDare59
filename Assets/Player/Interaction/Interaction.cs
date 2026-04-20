@@ -102,7 +102,7 @@ public class Interaction : MonoBehaviour
     {
         if (CurrentTarget == null) return;
         // Block interaction if not possessed
-        if (Player != null && !Player.Possesed) return;
+        //if (Player != null && !Player.Possesed) return;
         Debug.Log("Invoking on " + CurrentTarget.gameObject.name);
         CurrentTarget.Interacted.Invoke();
         
