@@ -2805,7 +2805,7 @@ PrefabInstance:
     - target: {fileID: 6239757591560844383, guid: 390f5b92c1ce31a42ae22bab2ddd9e72,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -36.7896
+      value: -36.743
       objectReference: {fileID: 0}
     - target: {fileID: 6239757591560844383, guid: 390f5b92c1ce31a42ae22bab2ddd9e72,
         type: 3}
@@ -2860,7 +2860,7 @@ PrefabInstance:
     - target: {fileID: 8621745719073215403, guid: 390f5b92c1ce31a42ae22bab2ddd9e72,
         type: 3}
       propertyPath: m_Size.y
-      value: 2.7807689
+      value: 2.873901
       objectReference: {fileID: 0}
     - target: {fileID: 8621745719073215403, guid: 390f5b92c1ce31a42ae22bab2ddd9e72,
         type: 3}
@@ -3381,7 +3381,12 @@ PrefabInstance:
     - target: {fileID: 4177736718541980868, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.2018895
+      value: 4.612507
+      objectReference: {fileID: 0}
+    - target: {fileID: 4177736718541980868, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -43.5
       objectReference: {fileID: 0}
     - target: {fileID: 4210658611078830679, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
@@ -3442,6 +3447,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ClearFlags
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6673152549030736095, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: orthographic size
+      value: 6.8493156
       objectReference: {fileID: 0}
     - target: {fileID: 6673152549030736095, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
