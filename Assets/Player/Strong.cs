@@ -52,10 +52,12 @@ public class Strong : MonoBehaviour
         RaycastHit2D[] Hits = Physics2D.RaycastAll(transform.position, Direction, PunchRange);
         foreach (RaycastHit2D Hit in Hits)
         {
-            if (Hit.collider.gameObject.name == "Rock")
+            if (Hit.collider.gameObject.CompareTag("Rock"))
             {
-                Destroy(Hit.collider.gameObject);
+                Debug.Log("SMASHHHH");
                 GetComponentInChildren<AudioSource>().PlayOneShot(SplosionSound);
+                Destroy(Hit.collider.gameObject);
+                
                 break;
             }
         }

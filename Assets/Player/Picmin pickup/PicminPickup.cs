@@ -19,7 +19,7 @@ public class CursorManager : MonoBehaviour
 
     void Start()
     {
-        TargetCamera = FindFirstObjectByType<Camera>();
+        TargetCamera = FindAnyObjectByType<Camera>();
         Player = GetComponent<Player2D>();
         SetCursor(DefaultCursor);
     }
