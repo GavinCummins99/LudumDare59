@@ -42,7 +42,7 @@ public class SceneTransition : MonoBehaviour
             if (!string.IsNullOrEmpty(levelName))
             {
                 int currentIndex = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene(currentIndex + 1);
+                SceneManager.LoadScene(levelName);
             }
         }));
     }
