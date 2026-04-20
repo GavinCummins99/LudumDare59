@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Player2D : MonoBehaviour
@@ -9,6 +10,9 @@ public class Player2D : MonoBehaviour
     public InputActionAsset inputActions;
     private InputAction moveAction;
     private InputAction jumpAction;
+    private InputAction resetAction;
+    private InputAction nextAction;
+    private InputAction previousAction;
     private InputActionMap playerMap;
     [Header("Movement")]
     public float speed = 7f;
@@ -46,14 +50,21 @@ public class Player2D : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponentInChildren<Animator>();
         defaultGravityScale = rb.gravityScale;
+
+        //Input mapping
         playerMap = inputActions.FindActionMap("Player");
+        
+        //Movement Inputs
         moveAction = playerMap.FindAction("Move");
         jumpAction = playerMap.FindAction("Jump");
+        
         // Horizontal input
         moveAction.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
         moveAction.canceled += _ => moveInput = Vector2.zero;
+        
         // Buffer the jump press
         jumpAction.performed += _ => jumpBufferTimer = jumpBufferTime;
+        
         // Jump-cut: releasing early cuts vertical speed
         jumpAction.canceled += _ =>
         {
@@ -62,6 +73,15 @@ public class Player2D : MonoBehaviour
                 rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * jumpCutMultiplier);
             }
         };
+        
+          
+        //level control inputs
+        resetAction = playerMap.FindAction("Reset");
+        nextAction = playerMap.FindAction("Next");
+        previousAction = playerMap.FindAction("Previous");
+        
+        nextAction.performed += OnNext;
+        previousAction.performed += OnPrevious;
     }
 
     void Start()
@@ -97,6 +117,8 @@ public class Player2D : MonoBehaviour
 
     void FixedUpdate()
     {
+        jumpBufferTimer -= Time.fixedDeltaTime;
+        
         if (!Possesed) return;
         // ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
@@ -106,7 +128,7 @@ public class Player2D : MonoBehaviour
         else
             coyoteTimer -= Time.fixedDeltaTime;
         // tick the jump buffer down every physics step
-        jumpBufferTimer -= Time.fixedDeltaTime;
+        
 
         // auto walk overrides manual input
         if (IsWalking)
@@ -150,6 +172,7 @@ public class Player2D : MonoBehaviour
             rb.gravityScale = defaultGravityScale * fallGravityMultiplier;
         else
             rb.gravityScale = defaultGravityScale;
+       
         // update animator
         UpdateAnimator();
     }
@@ -160,5 +183,54 @@ public class Player2D : MonoBehaviour
 
         GetComponentInChildren<AudioSource>().PlayOneShot(Swooshes[pipe]);
 
+    }
+
+   
+    
+    //level controls
+    public void LoadNewLevelByName(string LevelName)
+    {
+        SceneManager.LoadScene(LevelName);
+    }
+
+    public void ResetCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    
+    public void SkipLevel(int direction)
+    {
+        int totalScenes = SceneManager.sceneCountInBuildSettings;
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+
+        int nextIndex = (currentIndex + direction + totalScenes) % totalScenes; //wrapping forward and backwards
+
+        //stop reloading the same scene
+        if (nextIndex == currentIndex)
+        {
+            Debug.Log("Blocked: tried to reload current scene");
+            return;
+        }
+
+        SceneManager.LoadScene(nextIndex);
+    }
+    
+    //Level input event handlers
+    void OnNext(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("OnNext");
+            SkipLevel(1);
+        }
+    }
+    
+    void OnPrevious(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log("OnPrevious");
+            SkipLevel(-1);
+        }
     }
 }

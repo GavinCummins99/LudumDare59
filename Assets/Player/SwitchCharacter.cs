@@ -86,20 +86,25 @@ public class SwitchCharacter : MonoBehaviour
         int resumeIndex = previousPikmin != null ? _sortedPikmin.IndexOf(previousPikmin) : -1;
         _currentPikminIndex = (resumeIndex + 1) % _sortedPikmin.Count;
 
-        this.gameObject.GetComponent<SignalController>().Deactivate();
-
         GameObject currentPikmin = _sortedPikmin[_currentPikminIndex].gameObject;
 
         GetComponent<Rigidbody2D>().linearVelocityX = 0;
         PossessPlayer(currentPikmin);
-        this.gameObject.GetComponent<SignalController>().LittleDude = currentPikmin;
+
+        // Always update signal on the player only
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+        {
+            SignalController sc = player.GetComponent<SignalController>();
+            sc.Deactivate();
+            sc.LittleDude = currentPikmin;
+            sc.Activate();
+        }
 
         if (gameObject.CompareTag("Player"))
         {
             if (group.Targets.Count > 1)
                 group.Targets.RemoveRange(1, group.Targets.Count - 1);
-
-            this.gameObject.GetComponent<SignalController>().Activate();
 
             if (cameraManager)
                 group.AddMember(currentPikmin.transform, 1f, 0.5f);
@@ -115,9 +120,11 @@ public class SwitchCharacter : MonoBehaviour
         if (group.Targets.Count > 1)
             group.Targets.RemoveRange(1, group.Targets.Count - 1);
         
-        this.gameObject.GetComponent<SignalController>().Deactivate();
-
+        // Deactivate signal on player only
         GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if (player != null)
+            player.GetComponent<SignalController>()?.Deactivate();
+
         if (player != null) PossessPlayer(player);
     }
 
@@ -145,6 +152,11 @@ public class SwitchCharacter : MonoBehaviour
     {
         Player2D p2d = obj.GetComponent<Player2D>();
         if (p2d != null) p2d.Possesed = false;
+        
+        // Reset animator so it doesn't freeze on last state
+        Animator anim = obj.GetComponentInChildren<Animator>();
+        if (anim != null) anim.SetBool("Walking", false);
+
 
         Camera cam = obj.GetComponentInChildren<Camera>(true);
         if (cam != null) cam.gameObject.SetActive(false);
