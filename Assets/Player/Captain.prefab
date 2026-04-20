@@ -130,7 +130,7 @@ Transform:
   m_GameObject: {fileID: 592984252086822106}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.87, z: 0}
+  m_LocalPosition: {x: 0, y: 2.57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 10
   m_MaskInteraction: 0
   m_Sprite: {fileID: 3855116479797554139, guid: 21839358936b843439bec7942eca995a,
     type: 3}
@@ -248,7 +248,6 @@ GameObject:
   - component: {fileID: 8275160961908272754}
   - component: {fileID: 8877019987377833564}
   - component: {fileID: 7214486945377169421}
-  - component: {fileID: 7126387242345704941}
   m_Layer: 10
   m_Name: Captain
   m_TagString: Player
@@ -467,22 +466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d9ce1be1687a7c4cb31c6601831d83f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnimationEventRelay
---- !u!114 &7126387242345704941
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776802948618208602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 61ae3ff742d101e4bb0f11916a9e54df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  PunchTime: 1
-  UnlockTime: 1.97
-  PunchRange: 2
-  SplosionSound: {fileID: 8300000, guid: 32143f67b85876c4c83b5874fbbbff45, type: 3}
 --- !u!1 &5754865514906381168
 GameObject:
   m_ObjectHideFlags: 0

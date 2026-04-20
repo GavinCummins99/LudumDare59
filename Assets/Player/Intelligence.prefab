@@ -17,7 +17,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inputActions
       value: 
-      objectReference: {fileID: -944628639613478452, guid: c8fbbf3b8c994064bb9c3d2ea92694af,
+      objectReference: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
         type: 3}
     - target: {fileID: 1860772721961186489, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 4699966799683809774, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 4
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -261,7 +261,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 414ee5f7bd65bbb4493e0d4742007a43, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7126387242345704941, guid: ded2c49a640c70249bc0341af8e2dd9c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

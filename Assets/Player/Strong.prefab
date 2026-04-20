@@ -22,7 +22,7 @@ PrefabInstance:
         type: 3}
       propertyPath: inputActions
       value: 
-      objectReference: {fileID: -944628639613478452, guid: c8fbbf3b8c994064bb9c3d2ea92694af,
+      objectReference: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
         type: 3}
     - target: {fileID: 1860772721961186489, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -108,7 +108,7 @@ PrefabInstance:
     - target: {fileID: 4699966799683809774, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 3
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5899227260366469973, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -179,12 +179,12 @@ PrefabInstance:
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.84466
+      value: 4.62
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.99
+      value: 0.81
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -244,6 +244,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6294224746587060493}
+    - targetCorrespondingSourceObject: {fileID: 2776802948618208602, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8425037577821885340}
   m_SourcePrefab: {fileID: 100100000, guid: ded2c49a640c70249bc0341af8e2dd9c, type: 3}
 --- !u!1 &8456501090107770696 stripped
 GameObject:
@@ -304,3 +308,19 @@ MonoBehaviour:
     DissipationDistance: 100
     PropagationSpeed: 343
   DefaultVelocity: {x: 0, y: -1, z: 0}
+--- !u!114 &8425037577821885340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8456501090107770696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61ae3ff742d101e4bb0f11916a9e54df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Strong
+  PunchTime: 1
+  UnlockTime: 1.97
+  PunchRange: 2
+  SplosionSound: {fileID: 8300000, guid: 32143f67b85876c4c83b5874fbbbff45, type: 3}
