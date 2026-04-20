@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   Possesed: 1
-  inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
+  inputActions: {fileID: -944628639613478452, guid: c8fbbf3b8c994064bb9c3d2ea92694af,
     type: 3}
   speed: 7
   jumpForce: 6
