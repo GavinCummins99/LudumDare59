@@ -24,7 +24,8 @@ public class TMPButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     
     public void LoadFirstLevel()
     {
-        SceneManager.LoadScene(1);
+        int currentIndex = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.LoadScene(currentIndex + 1);
     }
 
     public void QuitGame()
