@@ -247,7 +247,6 @@ GameObject:
   - component: {fileID: -6349531133993889457}
   - component: {fileID: 8275160961908272754}
   - component: {fileID: 8877019987377833564}
-  - component: {fileID: 7214486945377169421}
   - component: {fileID: 7126387242345704941}
   m_Layer: 10
   m_Name: Captain
@@ -455,18 +454,6 @@ MonoBehaviour:
   HoverRadius: 0.5
   FollowSpeed: 10
   VerticalOffset: 1.1
---- !u!114 &7214486945377169421
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2776802948618208602}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d9ce1be1687a7c4cb31c6601831d83f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::AnimationEventRelay
 --- !u!114 &7126387242345704941
 MonoBehaviour:
   m_ObjectHideFlags: 0
