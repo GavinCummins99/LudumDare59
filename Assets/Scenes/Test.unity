@@ -514,6 +514,36 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.65747
       objectReference: {fileID: 0}
+    - target: {fileID: 1464215617808677527, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: ChannelMask
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464215617808677527, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: Use2DDistance
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464215617808677527, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: UseCameraSpace
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464215617808677527, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: ReactionSettings.Duration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464215617808677527, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: ReactionSettings.AmplitudeGain
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1464215617808677527, guid: 8b790eda66b25bb47924b9c22144c0c7,
+        type: 3}
+      propertyPath: ReactionSettings.FrequencyGain
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2303351282924367505, guid: 8b790eda66b25bb47924b9c22144c0c7,
         type: 3}
       propertyPath: Targets.Array.data[0].Object
@@ -666,6 +696,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294224746587060493, guid: bac41323892fd444d97132ef562dfe73,
+        type: 3}
+      propertyPath: ImpulseDefinition.ImpulseType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6656991351297913156, guid: bac41323892fd444d97132ef562dfe73,
         type: 3}
