@@ -79,6 +79,13 @@ public class SwitchCharacter : MonoBehaviour
             ? _sortedPikmin[_currentPikminIndex]
             : null;
 
+        // Stop whoever is currently being controlled, not just the base player
+        if (_currentPlayer != null)
+        {
+            Rigidbody2D currentRb = _currentPlayer.GetComponent<Rigidbody2D>();
+            if (currentRb != null) currentRb.linearVelocity = Vector2.zero;
+        }
+
         BuildSortedPikminList();
 
         if (_sortedPikmin.Count == 0) return;
@@ -88,7 +95,6 @@ public class SwitchCharacter : MonoBehaviour
 
         GameObject currentPikmin = _sortedPikmin[_currentPikminIndex].gameObject;
 
-        GetComponent<Rigidbody2D>().linearVelocityX = 0;
         PossessPlayer(currentPikmin);
 
         // Always update signal on the player only
@@ -150,13 +156,16 @@ public class SwitchCharacter : MonoBehaviour
 
     void Unpossess(GameObject obj)
     {
+        obj.GetComponent<Strong>()?.NotifyUnpossessed();
+
         Player2D p2d = obj.GetComponent<Player2D>();
         if (p2d != null) p2d.Possesed = false;
-        
-        // Reset animator so it doesn't freeze on last state
+
+        Rigidbody2D rb = obj.GetComponent<Rigidbody2D>();
+        if (rb != null) rb.linearVelocity = Vector2.zero;
+
         Animator anim = obj.GetComponentInChildren<Animator>();
         if (anim != null) anim.SetBool("Walking", false);
-
 
         Camera cam = obj.GetComponentInChildren<Camera>(true);
         if (cam != null) cam.gameObject.SetActive(false);
