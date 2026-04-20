@@ -39,15 +39,23 @@ public class Strong : MonoBehaviour
         StartCoroutine(Cooldown());
     }
 
+    private bool _switchedAwayMidAction = false;
+
+    public void NotifyUnpossessed()
+    {
+        _switchedAwayMidAction = true;
+    }
+
     private System.Collections.IEnumerator Cooldown()
     {
         OnCooldown = true;
-        // Lock player movement
+        _switchedAwayMidAction = false;
+
         if (Player != null)
             Player.Possesed = false;
-        // Wait until punch hits
+
         yield return new WaitForSeconds(PunchTime);
-        // Do the raycast at punch impact
+
         Vector2 Direction = new Vector2(transform.localScale.x, 0f);
         RaycastHit2D[] Hits = Physics2D.RaycastAll(transform.position, Direction, PunchRange);
         foreach (RaycastHit2D Hit in Hits)
@@ -57,17 +65,16 @@ public class Strong : MonoBehaviour
                 Debug.Log("SMASHHHH");
                 GetComponentInChildren<AudioSource>().PlayOneShot(SplosionSound);
                 Destroy(Hit.collider.gameObject);
-                
                 break;
             }
         }
-        // Wait remaining time then unlock
-        yield return new WaitForSeconds(UnlockTime - PunchTime);
-        // Unlock player movement
-        if (Player != null)
-            Player.Possesed = true;
 
+        yield return new WaitForSeconds(UnlockTime - PunchTime);
         OnCooldown = false;
+
+        // Only re-possess if we weren't switched away from mid-action
+        if (Player != null && !_switchedAwayMidAction)
+            Player.Possesed = true;
     }
 
     void OnDrawGizmosSelected()
