@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SceneTransition : MonoBehaviour
 {
@@ -39,7 +40,10 @@ public class SceneTransition : MonoBehaviour
         _activeWipe = StartCoroutine(WipeRoutine(from, to, () =>
         {
             if (!string.IsNullOrEmpty(levelName))
-                UnityEngine.SceneManagement.SceneManager.LoadScene(levelName);
+            {
+                int currentIndex = SceneManager.GetActiveScene().buildIndex;
+                SceneManager.LoadScene(currentIndex + 1);
+            }
         }));
     }
 

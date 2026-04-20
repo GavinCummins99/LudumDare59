@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections.Generic;
 using Unity.Cinemachine;
-using UnityEditor.UI;
+using UnityEngine.UI;
 
 public class SwitchCharacter : MonoBehaviour
 {
