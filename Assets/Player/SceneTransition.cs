@@ -22,11 +22,11 @@ public class SceneTransition : MonoBehaviour
 
     private void Start()
     {
-        WipeIn();
+        WipeIn(0);
     }
 
-    public void WipeIn(string levelName = null) => StartWipe(0f, 1f, levelName);
-    public void WipeOut(string levelName = null) => StartWipe(1f, 0f, levelName);
+    public void WipeIn(int levelCount) => StartWipe(0f, 1f, levelCount);
+    public void WipeOut(int levelCount) => StartWipe(1f, 0f, levelCount);
 
     public void SetProgress(float value)
     {
@@ -34,15 +34,19 @@ public class SceneTransition : MonoBehaviour
             irisMaterial.SetFloat(ProgressID, Mathf.Clamp01(value));
     }
 
-    private void StartWipe(float from, float to, string levelName = null)
+    private void StartWipe(float from, float to, int levelCount)
     {
         if (_activeWipe != null) StopCoroutine(_activeWipe);
         _activeWipe = StartCoroutine(WipeRoutine(from, to, () =>
         {
-            if (!string.IsNullOrEmpty(levelName))
+            if (levelCount != 0)
             {
                 int currentIndex = SceneManager.GetActiveScene().buildIndex;
-                SceneManager.LoadScene(levelName);
+                int totalScenes = SceneManager.sceneCountInBuildSettings;
+
+                int nextIndex = (currentIndex + 1) % totalScenes;
+
+                SceneManager.LoadScene(nextIndex);
             }
         }));
     }

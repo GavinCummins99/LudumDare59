@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LevelTrigger : MonoBehaviour
 {
-    public string levelName = null;
+    public int levelCount = 1;
     
     //loads level on trigger enter
     void OnCollisionEnter2D(Collision2D other)
@@ -11,7 +11,7 @@ public class LevelTrigger : MonoBehaviour
         {
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
-            GetComponent<SceneTransition>().WipeOut(levelName);
+            GetComponent<SceneTransition>().WipeOut(levelCount);
             Debug.Log("WIPEOUT");
         }
     }

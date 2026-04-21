@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 112}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 2142
+  controlID: 5234
   draggingID: 0
 --- !u!114 &2
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 112}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 2143
+  controlID: 5235
   draggingID: 0
 --- !u!114 &4
 MonoBehaviour:
@@ -180,7 +180,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 56}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1960
+  controlID: 5152
   draggingID: 0
 --- !u!114 &5
 MonoBehaviour:
@@ -201,8 +201,8 @@ MonoBehaviour:
     y: 0
     width: 366
     height: 831
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 226}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -254,6 +254,24 @@ MonoBehaviour:
       m_LastClickedID:
         m_Data: 0
       m_ExpandedIDs:
+      - m_Data: -25584
+      - m_Data: -25238
+      - m_Data: -25196
+      - m_Data: -24264
+      - m_Data: -23546
+      - m_Data: -22744
+      - m_Data: -21996
+      - m_Data: -21268
+      - m_Data: -21244
+      - m_Data: -17612
+      - m_Data: -17280
+      - m_Data: -17242
+      - m_Data: -16314
+      - m_Data: -15600
+      - m_Data: -14802
+      - m_Data: -14058
+      - m_Data: -13334
+      - m_Data: -13314
       - m_Data: -2000
       - m_Data: -1558
       - m_Data: -1382
@@ -825,9 +843,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -4.267654, y: -6.0137377, z: -0.021413557}
+    m_Target: {x: 20.16229, y: -16.803879, z: -0.14421512}
     speed: 2
-    m_Value: {x: -4.267654, y: -6.0137377, z: -0.021413557}
+    m_Value: {x: 20.16229, y: -16.803879, z: -0.14421512}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -878,9 +896,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 12.141263
+    m_Target: 24.42145
     speed: 2
-    m_Value: 12.141263
+    m_Value: 24.42145
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1768,7 +1786,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -1777,15 +1795,15 @@ MonoBehaviour:
     y: 831
     width: 2074
     height: 462
-  m_MinSize: {x: 230, y: 250}
-  m_MaxSize: {x: 10000, y: 10000}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 13}
   - {fileID: 14}
   - {fileID: 15}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1836,7 +1854,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets
+    - Assets/Player
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1846,7 +1864,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets
+  - Assets/Player
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\UnityProjects\LudumDare59
   m_LockTracker:
@@ -1855,9 +1873,9 @@ MonoBehaviour:
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs:
-    - m_Data: 54990
+    - m_Data: 55454
     m_LastClickedID:
-      m_Data: 54990
+      m_Data: 55454
     m_ExpandedIDs:
     - m_Data: 0
     - m_Data: 54990

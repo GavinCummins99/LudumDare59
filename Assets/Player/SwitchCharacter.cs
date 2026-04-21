@@ -173,6 +173,6 @@ public class SwitchCharacter : MonoBehaviour
 
     void OnDestroy()
     {
-        _switchAction.Dispose();
+       // _switchAction.Dispose();
     }
 }
