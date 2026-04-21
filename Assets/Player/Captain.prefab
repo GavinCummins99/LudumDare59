@@ -287,7 +287,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bc136fe686ca7f419a97bb947da4b8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  Possesed: 1
+  Possesed: 0
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100,
     type: 3}
   speed: 7
@@ -303,7 +303,9 @@ MonoBehaviour:
     m_Bits: 256
   Weight: 1
   IsWalking: 0
-  Swooshes: []
+  Swooshes:
+  - {fileID: 8300000, guid: 70a05028dd5558648aaba84dbc590402, type: 3}
+  - {fileID: 8300000, guid: ae2bc00536992db43afbc1965ce2d6ce, type: 3}
 --- !u!50 &5286787014659600961
 Rigidbody2D:
   serializedVersion: 5

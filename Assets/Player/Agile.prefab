@@ -8,32 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
-        type: 3}
-      propertyPath: Possesed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
-        type: 3}
-      propertyPath: inputActions
-      value: 
-      objectReference: {fileID: -944628639613478452, guid: c8fbbf3b8c994064bb9c3d2ea92694af,
-        type: 3}
-    - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
-        type: 3}
-      propertyPath: Swooshes.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
-        type: 3}
-      propertyPath: 'Swooshes.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: 70a05028dd5558648aaba84dbc590402, type: 3}
-    - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
-        type: 3}
-      propertyPath: 'Swooshes.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: ae2bc00536992db43afbc1965ce2d6ce, type: 3}
     - target: {fileID: 1860772721961186489, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
