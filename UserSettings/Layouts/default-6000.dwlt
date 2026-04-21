@@ -305,7 +305,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 43.2
+    y: 0
     width: 2048
     height: 36
   m_SerializedDataModeController:
@@ -676,7 +676,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 79.200005
+    y: 24
     width: 249.4
     height: 619.6
   m_SerializedDataModeController:
@@ -773,8 +773,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Scene\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 250.40001
-    y: 79.200005
+    x: 251.4
+    y: 24
     width: 1172.4
     height: 619.6
   m_SerializedDataModeController:
@@ -1297,7 +1297,7 @@ MonoBehaviour:
         speed: 2
         m_Value: 0
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
-      m_OffsetAlongAxis: {x: 0, y: 7, z: 0}
+      m_OffsetAlongAxis: {x: 0, y: 0, z: 0}
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
@@ -2195,7 +2195,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_LastSelectedObjectID:
-    m_Data: -118674
+    m_Data: 0
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -2219,7 +2219,7 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 724.8
+    y: 669.6
     width: 1423.8
     height: 333.20007
   m_SerializedDataModeController:
@@ -2270,10 +2270,7 @@ MonoBehaviour:
       m_Data: 77264
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 77264
-    - m_Data: 77290
-    - m_Data: 77332
-    - m_Data: 1000000000
+    - m_Data: 54682
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2307,8 +2304,7 @@ MonoBehaviour:
       m_Data: 0
     m_ExpandedIDs:
     - m_Data: 0
-    - m_Data: 77290
-    - m_Data: 1000000000
+    - m_Data: 54682
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2473,8 +2469,8 @@ MonoBehaviour:
     m_TextWithWhitespace: "Inspector\u200B"
   m_Pos:
     serializedVersion: 2
-    x: 1424.8
-    y: 79.200005
+    x: 1425.8
+    y: 24
     width: 622.19995
     height: 978.80005
   m_SerializedDataModeController:
