@@ -8,6 +8,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6349531133993889457, guid: ded2c49a640c70249bc0341af8e2dd9c,
+        type: 3}
+      propertyPath: InteractDistance
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1130626857985848150, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: Weight
@@ -179,12 +184,12 @@ PrefabInstance:
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.62
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 8497826280605915232, guid: ded2c49a640c70249bc0341af8e2dd9c,
         type: 3}
@@ -322,5 +327,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Strong
   PunchTime: 1
   UnlockTime: 1.97
-  PunchRange: 2
+  PunchRange: 3
   SplosionSound: {fileID: 8300000, guid: 32143f67b85876c4c83b5874fbbbff45, type: 3}
