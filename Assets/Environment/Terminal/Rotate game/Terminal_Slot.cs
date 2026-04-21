@@ -1,10 +1,19 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class Terminal_Slot : MonoBehaviour
 {
     bool CanClick = true;
+    
+    public Sprite[] Sprites;
+
+    public void SetSprite(int ID)
+    {
+        GetComponent<Image>().sprite = Sprites[ID];
+    }
 
     void Start()
     {

@@ -5,6 +5,9 @@ public class Terminal_RotateGame : MonoBehaviour
     void Start()
     {
         RandomizeChildRotation();
+        int Pic = Random.Range(0, 3);
+        foreach (Transform Child in transform)
+            Child.GetComponent<Terminal_Slot>().SetSprite(Pic);
     }
 
     void RandomizeChildRotation()
