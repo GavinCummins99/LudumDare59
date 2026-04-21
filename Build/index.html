@@ -3,54 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Prototype 3</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
+    <title>LudumDare59</title>
     <style>
-      html, body { margin: 0; padding: 0; overflow: hidden; background: #000; width: 100%; height: 100%; }
-      #unity-container { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; }
-      #unity-canvas { width: 100% !important; height: 100% !important; }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+      #unity-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
-    <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" style="cursor: default;"></canvas>
-      <div id="unity-warning"></div>
-    </div>
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
     <script>
-      var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
-      var warningBanner = document.querySelector("#unity-warning");
 
-      function unityShowBanner(msg, type) {
-        function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
-        }
-        var div = document.createElement('div');
-        div.innerHTML = msg;
-        warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
-        else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
-            warningBanner.removeChild(div);
-            updateBannerVisibility();
-          }, 5000);
-        }
-        updateBannerVisibility();
+      // Explicitly size the canvas to the window
+      function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
       }
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/HTML.loader.js";
+      var loaderUrl = buildUrl + "/Build.loader.js";
       var config = {
-        dataUrl: buildUrl + "/HTML.data",
-        frameworkUrl: buildUrl + "/HTML.framework.js",
-        codeUrl: buildUrl + "/HTML.wasm",
+        dataUrl:      buildUrl + "/Build.data",
+        frameworkUrl: buildUrl + "/Build.framework.js",
+        codeUrl:      buildUrl + "/Build.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
-        productName: "Prototype 3",
-        productVersion: "1.0",
-        showBanner: unityShowBanner,
+        productName: "LudumDare59",
+        productVersion: "0.1",
+        matchWebGLToCanvasSize: true,
       };
 
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
@@ -58,18 +52,12 @@
         meta.name = 'viewport';
         meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
         document.getElementsByTagName('head')[0].appendChild(meta);
-        container.className = "unity-mobile";
-        canvas.className = "unity-mobile";
       }
 
       var script = document.createElement("script");
       script.src = loaderUrl;
       script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          // no loading bar
-        }).then((unityInstance) => {
-          // no-op, canvas already fills screen
-        }).catch((message) => {
+        createUnityInstance(canvas, config).catch((message) => {
           alert(message);
         });
       };
