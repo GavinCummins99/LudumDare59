@@ -20,6 +20,13 @@ public class TrapDoor : MonoBehaviour
         UpdateDoor();
     }
 
+    public void SetDoorState(bool Open)
+    {
+        isOpen = Open;
+        UpdateDoor();
+
+    }
+
     private void UpdateDoor()
     {
         spriteRenderer.sprite = isOpen ? openTrapDoor : closedTrapDoor;
