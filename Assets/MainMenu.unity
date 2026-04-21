@@ -559,7 +559,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 933840aa5b3e29a449ea73ae0f8bc56d, type: 3}
   - {fileID: 21300000, guid: b7c75d5ca1d32924abed76c3d803a821, type: 3}
   - {fileID: 21300000, guid: e084f140c6419f044a55d7f760836464, type: 3}
-  - {fileID: 21300000, guid: 798b1848e7b77f04ab8ec02c751aea62, type: 3}
+  - {fileID: -710406286100637073, guid: 8a4539b233483d34bb04484b8dba91a0, type: 3}
   spriteRenderer: {fileID: 697633708}
   Next: {fileID: 21300000, guid: 1876b13a7e82f6546992f8c2732bdc34, type: 3}
 --- !u!1 &1380532134
