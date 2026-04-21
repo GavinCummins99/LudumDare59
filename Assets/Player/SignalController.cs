@@ -12,6 +12,10 @@ public class SignalController : MonoBehaviour
     private GameObject ribbon;
     private Material mat;
 
+    void Start()
+    {
+        MaxDistance = 100f;
+    }
     public void Activate()
     {
         ribbon = Instantiate(ribbonPrefab);

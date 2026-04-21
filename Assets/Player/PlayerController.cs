@@ -57,6 +57,7 @@ public class Player2D : MonoBehaviour
         //Movement Inputs
         moveAction = playerMap.FindAction("Move");
         jumpAction = playerMap.FindAction("Jump");
+        resetAction = playerMap.FindAction("Reset");
         
         // Horizontal input
         moveAction.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
@@ -80,10 +81,13 @@ public class Player2D : MonoBehaviour
         nextAction = playerMap.FindAction("Next");
         previousAction = playerMap.FindAction("Previous");
         
+        resetAction.performed+= _ => ResetCurrentLevel();
+        
         nextAction.performed += OnNext;
         previousAction.performed += OnPrevious;
     }
 
+   
     void Start()
     {
         Application.targetFrameRate = 60;
@@ -193,10 +197,7 @@ public class Player2D : MonoBehaviour
         SceneManager.LoadScene(LevelName);
     }
 
-    public void ResetCurrentLevel()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
+    
     
     public void SkipLevel(int direction)
     {
@@ -232,5 +233,10 @@ public class Player2D : MonoBehaviour
             Debug.Log("OnPrevious");
             SkipLevel(-1);
         }
+    }
+
+    public void ResetCurrentLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }
